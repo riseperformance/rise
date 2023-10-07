@@ -1,0 +1,58 @@
+@import "/src/_variables.scss";
+
+.advertisingContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 0 9rem 0;
+
+  span:first-child {
+    font-size: 3.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  span:last-child {
+    font-size: 7.5rem;
+    font-family: 'BabaPro', sans-serif;
+    font-weight: 700;
+    text-align: right;
+    line-height: 0.9;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    opacity: 0.2;
+    user-select: none;
+  }
+}
+
+.advertisingCardsContainer {
+  display: flex;
+  column-gap: 2rem;
+  margin-bottom: 16rem;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 18.75rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    background-color: $card;
+
+    img {
+      width: 100%;
+      height: 9rem;
+      object-fit: cover;
+    }
+
+    p {
+      height: 100%;
+      color: $onCard;
+      font-size: 1.25rem;
+      font-weight: 300;
+      text-align: center;
+      padding: 1rem;
+    }
+  }
+}

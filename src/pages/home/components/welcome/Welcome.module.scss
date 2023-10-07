@@ -1,0 +1,61 @@
+.welcomeContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .welcomeMessageContainer,
+  .callTheActionContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .welcomeMessageContainer {
+    align-items: flex-start;
+
+    h1 {
+      font-size: 2.625rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 2.25rem;
+      font-weight: 200;
+    }
+  }
+
+  .callTheActionContainer {
+    max-width: 22.75rem;
+    width: 100%;
+    align-items: flex-end;
+
+    .callTheAction {
+      width: 100%;
+      height: 4rem;
+      border-radius: 2rem;
+      font-size: 1.75rem;
+      text-transform: initial;
+    }
+
+    .knowMoreButton {
+      max-width: 13.5rem;
+      width: 100%;
+      height: 4rem;
+      border-radius: 2rem;
+      font-size: 1.75rem;
+      text-transform: initial;
+    }
+  }
+
+  img {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-50%);
+    user-select: none;
+  }
+}

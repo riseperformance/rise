@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&family=Montserrat:wght@400;600&display=swap");
+@import "_variables.scss";
+
+@font-face {
+  font-family: BabaPro;
+  src: url(/babapro_bold.ttf);
+  font-weight: bold;
+}
+
+:root {
+  --background-color: "#051621";
+
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: $onSurface;
+  background-color: $surface;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1rem;
+  font-weight: 400;
+}
