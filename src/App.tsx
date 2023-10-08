@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
-import { Header } from "./components/Header";
+import { Header } from "./components/header/Header";
 import { Home } from "./pages/home/Home";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 

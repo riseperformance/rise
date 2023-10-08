@@ -1,0 +1,80 @@
+@import "/src/_variables.scss";
+
+.contactsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 7.5rem;
+
+  h2 {
+    align-self: flex-start;
+    font-size: 2.25rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+
+  .contactsContainer {
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+    margin-bottom: 10rem;
+
+    .divider {
+      width: 0.0625rem;
+      height: 15.5rem;
+      background-color: $onSurface;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 2rem;
+
+      li {
+        list-style: none;
+
+        a {
+          display: flex;
+          align-items: center;
+          column-gap: 0.5rem;
+          text-decoration: none;
+          font-size: 2rem;
+          font-weight: 300;
+          color: $onSurface;
+
+          &::before {
+            content: "";
+            position: relative;
+            display: block;
+            width: 2.75rem;
+            height: 2.75rem;
+            aspect-ratio: 1;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+
+          &.instagramContact::before {
+            background-image: url(/instagram.svg);
+          }
+
+          &.whatsappContact::before {
+            background-image: url(/whatsapp.svg);
+          }
+
+          &.phoneContact::before {
+            background-image: url(/phone.svg);
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,92 @@
+@import "/src/_variables.scss";
+
+.reviewsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 7.5rem;
+
+  h2 {
+    align-self: flex-start;
+    font-size: 2.25rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+  }
+
+  .swiperContainer {
+    display: flex;
+    width: 100%;
+    margin-bottom: 7rem;
+    user-select: none;
+
+    & > div {
+      align-items: stretch;
+      height: 100%;
+    }
+
+    .reviewContainer {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 37.875rem;
+      padding-top: 5rem;
+
+      img {
+        position: absolute;
+        top: 0;
+        width: 10rem;
+        height: 10rem;
+        aspect-ratio: 1;
+        border-radius: 100%;
+      }
+
+      .reviewCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+        height: 100%;
+        padding: 6rem 0 1.5rem 0;
+        background-color: $card;
+        border-radius: 1.5rem;
+
+        h3 {
+          font-size: 2rem;
+          font-weight: 600;
+          color: $secondaryVariant;
+        }
+
+        span {
+          height: 100%;
+          font-size: 2rem;
+          font-weight: 300;
+          text-align: center;
+          color: $onCard;
+          padding: 0 1.5rem;
+          overflow-y: auto;
+        }
+      }
+    }
+  }
+
+  .scheduleAppointmentButton {
+    max-width: 38rem;
+    width: 100%;
+    height: 4rem;
+    border-radius: 2rem;
+    font-size: 1.75rem;
+    text-transform: initial;
+    margin-bottom: 10rem;
+  }
+
+  .divider {
+    max-width: 40rem;
+    width: 100%;
+    height: 0.0625rem;
+    background-color: $primary;
+    margin: 0 1rem;
+  }
+}

@@ -1,0 +1,45 @@
+@import "/src/_variables.scss";
+
+.addressSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 7.5rem;
+
+  h2 {
+    align-self: flex-start;
+    font-size: 2.25rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+  }
+
+  .addressContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 3.5rem;
+    margin-bottom: 5rem;
+
+    span {
+      max-width: 33.5rem;
+      width: 100%;
+      font-size: 2rem;
+      font-weight: 300;
+      text-align: center;
+    }
+  }
+
+  iframe {
+    margin-bottom: 10rem;
+  }
+
+  .divider {
+    max-width: 40rem;
+    width: 100%;
+    height: 0.0625rem;
+    background-color: $primary;
+    margin: 0 1rem;
+  }
+}

@@ -1,7 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import styles from "./Header.module.scss";
 import logo from "/logo.png";
-import { classNames } from "../helpers/classnames";
+import { classNames } from "../../helpers/classnames";
 
 export const Header = () => {
   return (
