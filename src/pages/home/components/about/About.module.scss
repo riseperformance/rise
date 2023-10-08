@@ -1,0 +1,94 @@
+@import "/src/_variables.scss";
+
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 7.5rem;
+
+  h2 {
+    font-size: 2.25rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    align-self: start;
+    margin-bottom: 6rem;
+  }
+
+  .aboutContainer {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5rem;
+    width: 100%;
+    margin-bottom: 10rem;
+
+    img {
+      border-radius: 1.5rem 0 1.5rem 0;
+    }
+
+    .aboutContent {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 2rem;
+      padding-top: 8.75rem;
+
+      h3 {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        font-size: 2rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 1rem 4rem;
+        background-color: $container;
+        border-radius: 4.5rem 0 0 4.5rem;
+
+        span {
+          font-size: 1.875rem;
+          font-family: "Inter", sans-serif;
+          font-weight: 300;
+        }
+      }
+
+      p {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+
+      .instagramLink {
+        display: flex;
+        column-gap: 0.5rem;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 300;
+        color: $onSurface;
+
+        &::before {
+          content: "";
+          position: relative;
+          display: block;
+          width: 2.75rem;
+          height: 2.75rem;
+          aspect-ratio: 1;
+          background-image: url(/instagram.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+  }
+
+  .divider {
+    max-width: 40rem;
+    width: 100%;
+    height: 0.0625rem;
+    background-color: $primary;
+    margin: 0 1rem;
+  }
+}
