@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import styles from "./Plans.module.scss";
-import { duration } from "@mui/material";
 
 type Plan = {
   title: string;
