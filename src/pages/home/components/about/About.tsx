@@ -53,7 +53,7 @@ export const About = () => {
         <div className={styles.aboutContent}>
           <h3 style={banneStyle}>
             Dr. André Scardovelli
-            <span>Médico do esporte</span>
+            <span>Medicina do esporte</span>
           </h3>
           {aboutParagraphs.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>

@@ -3,6 +3,8 @@ import "./App.scss";
 import { Header } from "./components/header/Header";
 import { Home } from "./pages/home/Home";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { Appointments } from "./pages/appointments/Appointments";
+import { Plans } from "./pages/plans/Plans";
 
 declare module '@mui/material/styles' {
   interface Palette {
@@ -52,8 +54,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Header />}>
             <Route index element={<Home />} />
-            <Route path="consultas" element={<Header />} />
-            <Route path="planos" element={<Header />} />
+            <Route path="consultas" element={<Appointments />} />
+            <Route path="planos" element={<Plans />} />
             <Route path="exames" element={<Header />} />
           </Route>
         </Routes>

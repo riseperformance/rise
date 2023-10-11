@@ -1,0 +1,71 @@
+@import "/src/_variables.scss";
+
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  width: 100%;
+
+  .plansSection {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8.5rem;
+
+    .planContainer {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.5rem;
+
+      h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 3.25rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+      }
+
+      p {
+        max-width: 62rem;
+        width: 100%;
+        font-size: 2rem;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.25rem;
+        margin-bottom: 2rem;
+
+        li {
+          font-size: 2rem;
+          margin-left: 1.625rem;
+        }
+      }
+
+      .contractPlan {
+        font-size: 2rem;
+        font-weight: 300;
+
+        a {
+          font-weight: 700;
+          color: $primaryVariant;
+          text-decoration: none;
+        }
+      }
+
+      .durationBanner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 2.5rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 2rem 0rem 2rem 2.5rem;
+        background-color: $container;
+        border-radius: 4.5rem 0 0 4.5rem;
+      }
+    }
+  }
+}
