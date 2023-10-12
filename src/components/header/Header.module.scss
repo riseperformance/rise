@@ -7,7 +7,8 @@
   width: 100%;
   padding: 1rem 0 4rem 0;
 
-  ul {
+  ul,
+  #basic-menu {
     display: flex;
     align-items: center;
     column-gap: 5rem;
@@ -18,6 +19,7 @@
       font-weight: 200;
       color: $onSurface;
       text-decoration: none;
+      cursor: pointer;
     }
   }
 }

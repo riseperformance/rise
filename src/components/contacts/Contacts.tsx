@@ -1,10 +1,15 @@
 import styles from "./Contacts.module.scss";
 import alternativeLogo from "/alter_logo.png";
 
-export const Contacts = () => {
+type Props = {
+  showTitle?: boolean;
+};
+
+export const Contacts = (props: Props) => {
+  const showTitle = props.showTitle ?? true;
   return (
     <section className={styles.contactsSection}>
-      <h2>Fale conosco!</h2>
+      {showTitle ? <h2>Fale conosco!</h2> : undefined}
       <div className={styles.contactsContainer}>
         <img src={alternativeLogo} alt="Rise logo" />
         <div className={styles.divider} />
@@ -28,10 +33,7 @@ export const Contacts = () => {
             </a>
           </li>
           <li>
-            <a
-              className={styles.phoneContact}
-              href="tel:+55613558-0575"
-            >
+            <a className={styles.phoneContact} href="tel:+55613558-0575">
               (61) 3558-0575
             </a>
           </li>

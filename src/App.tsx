@@ -6,21 +6,21 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Appointments } from "./pages/appointments/Appointments";
 import { Plans } from "./pages/plans/Plans";
 
-declare module '@mui/material/styles' {
+declare module "@mui/material/styles" {
   interface Palette {
-    blue: Palette['primary'];
-    purple: Palette['primary'];
-    white: Palette['primary'];
+    blue: Palette["primary"];
+    purple: Palette["primary"];
+    white: Palette["primary"];
   }
 
   interface PaletteOptions {
-    blue?: PaletteOptions['primary'];
-    purple?: Palette['primary'];
-    white?: Palette['primary'];
+    blue?: PaletteOptions["primary"];
+    purple?: Palette["primary"];
+    white?: Palette["primary"];
   }
 }
 
-declare module '@mui/material/Button' {
+declare module "@mui/material/Button" {
   interface ButtonPropsColorOverrides {
     blue: true;
     purple: true;
@@ -29,21 +29,21 @@ declare module '@mui/material/Button' {
 }
 
 function App() {
-  let theme = createTheme();
+  let theme = createTheme({palette: { mode: 'dark'}});
 
-   theme = createTheme(theme, {
+  theme = createTheme(theme, {
     palette: {
       blue: theme.palette.augmentColor({
-        color: { main: '#5B9CC2' },
-        name: 'blue',
+        color: { main: "#5B9CC2" },
+        name: "blue",
       }),
       purple: theme.palette.augmentColor({
-        color: { main: '#6D4B98' },
-        name: 'purple',
+        color: { main: "#6D4B98" },
+        name: "purple",
       }),
       white: theme.palette.augmentColor({
-        color: { main: '#FFFFFF' },
-        name: 'white',
+        color: { main: "#FFFFFF" },
+        name: "white",
       }),
     },
   });

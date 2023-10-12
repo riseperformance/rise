@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import styles from "./Plans.module.scss";
 import blurDiamondVariant from "/blur_diamond_variant.svg";
 import { PlanRefund } from "../home/components/plan-refund/PlanRefund";
+import { Contacts } from "../../components/contacts/Contacts";
 
 type Plan = {
   title: string;
@@ -56,6 +57,16 @@ export const Plans = () => {
       ],
       link: "/",
       duration: "1 ano",
+    },
+  ];
+
+  const monitoring: Plan[] = [
+    {
+      title: "Acompanhamento nutrícional",
+      benefits: [
+        "1 consulta presencial com nutricionista por mês de acompanhamento;",
+        "Acompanhamento semanal via check-in",
+      ],
     },
   ];
 
@@ -123,11 +134,43 @@ export const Plans = () => {
             ) : undefined}
           </div>
         ))}
-
         <div className={styles.divider} />
       </section>
-      
+
+      <section className={styles.plansSection}>
+        {monitoring.map((monitoring, monitoringIndex) => (
+          <div key={monitoringIndex} className={styles.planContainer}>
+            <h2>{monitoring.title}</h2>
+            {monitoring.description ? (
+              <p>{monitoring.description}</p>
+            ) : undefined}
+            {monitoring.benefits.length > 0 ? (
+              <ul>
+                {monitoring.benefits.map((benefit, benefitIndex) => (
+                  <li key={benefitIndex}>{benefit}</li>
+                ))}
+              </ul>
+            ) : undefined}
+            {monitoring.link ? (
+              <span className={styles.contractPlan}>
+                Quer adquirir o seu Pacote {monitoring.title}?{" "}
+                <a href={monitoring.link} target="_blank">
+                  Clique aqui
+                </a>
+              </span>
+            ) : undefined}
+            {monitoring.duration ? (
+              <span style={banneStyle} className={styles.durationBanner}>
+                Duração: {monitoring.duration}
+              </span>
+            ) : undefined}
+          </div>
+        ))}
+        <div className={styles.divider} />
+      </section>
+
       <PlanRefund />
+      <Contacts showTitle={false} />
     </main>
   );
 };
