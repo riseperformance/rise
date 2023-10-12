@@ -1,0 +1,94 @@
+@import "/src/_variables.scss";
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 7.5rem;
+  width: 100%;
+
+  .titleContainer {
+    position: relative;
+    align-self: start;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    h1 {
+      max-width: 48rem;
+      width: 100%;
+      font-family: "Montserrat", sans-serif;
+      font-size: 3.625rem;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .diamondBlurImage {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-35%);
+      user-select: none;
+    }
+
+    .banner {
+      position: absolute;
+      top: 1rem;
+      right: 0;
+      display: flex;
+      column-gap: 0.5rem;
+      font-size: 2rem;
+      font-weight: 600;
+      padding: 1rem 0rem 1rem 3rem;
+      background-color: $primary;
+      color: $onPrimary;
+      border-radius: 3rem 0 0 3rem;
+    }
+  }
+
+  .goalSection {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 100%;
+
+    h2 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 2.375rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    p, span {
+      max-width: 62.375rem;
+      font-size: 2.375rem;
+      margin-left: 7.5rem;
+    }
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  .imagesSection {
+    display: flex;
+    column-gap: 2rem;
+    align-items: center;
+    width: 100%;
+
+    img {
+      width: 100%;
+      border-radius: 1.5rem;
+    }
+  }
+
+  .scheduleExamButton {
+    max-width: 38rem;
+    width: 100%;
+    height: 4rem;
+    border-radius: 2rem;
+    font-size: 1.75rem;
+    text-transform: initial;
+  }
+}
