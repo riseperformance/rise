@@ -1,0 +1,92 @@
+@import "/src/_variables.scss";
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 7.5rem;
+  width: 100%;
+
+  .titleContainer {
+    position: relative;
+    align-self: start;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    h1 {
+      max-width: 48rem;
+      width: 100%;
+      font-family: "Montserrat", sans-serif;
+      font-size: 3.625rem;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .diamondBlurImage {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-35%);
+      user-select: none;
+    }
+  }
+
+  .calorimetriaSection {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7.5rem;
+    width: 100%;
+
+    .examContainer {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.5rem;
+
+      h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        span {
+          color: $primary;
+          font-size: 2.75rem;
+          font-weight: 700;
+        }
+      }
+
+      p, span {
+        max-width: 62.375rem;
+        width: 100%;
+        font-size: 2.375rem;
+      }
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .imagesSection {
+    display: flex;
+    column-gap: 2rem;
+    align-items: center;
+    width: 100%;
+
+    img {
+      width: 100%;
+      border-radius: 1.5rem;
+    }
+  }
+
+  .scheduleExamButton {
+    max-width: 38rem;
+    width: 100%;
+    height: 4rem;
+    border-radius: 2rem;
+    font-size: 1.75rem;
+    text-transform: initial;
+  }
+}

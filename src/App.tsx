@@ -6,6 +6,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Appointments } from "./pages/appointments/Appointments";
 import { Plans } from "./pages/plans/Plans";
 import { DexaScan } from "./pages/exams/dexa-scan/DexaScan";
+import { Calorimetria } from "./pages/exams/calorimetria/Calorimetria";
 
 declare module "@mui/material/styles" {
   interface Palette {
@@ -30,7 +31,7 @@ declare module "@mui/material/Button" {
 }
 
 function App() {
-  let theme = createTheme({palette: { mode: 'dark'}});
+  let theme = createTheme({ palette: { mode: "dark" } });
 
   theme = createTheme(theme, {
     palette: {
@@ -58,7 +59,7 @@ function App() {
             <Route path="consultas" element={<Appointments />} />
             <Route path="planos" element={<Plans />} />
             <Route path="exames/dexascan" element={<DexaScan />} />
-            <Route path="exames/calorimetria" element={<Header />} />
+            <Route path="exames/calorimetria" element={<Calorimetria />} />
           </Route>
         </Routes>
       </BrowserRouter>
