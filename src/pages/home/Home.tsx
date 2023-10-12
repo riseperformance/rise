@@ -1,4 +1,4 @@
-import "./Home.module.scss";
+import styles from "./Home.module.scss";
 import { Address } from "./components/address/Address";
 import { About } from "./components/about/About";
 import { Advertising } from "./components/advertising/Advertising";
@@ -11,7 +11,7 @@ import { Contacts } from "../../components/contacts/Contacts";
 
 export const Home = () => {
   return (
-    <main>
+    <main className={styles.mainContainer}>
       <Welcome />
       <Advertising />
       <Benefits />

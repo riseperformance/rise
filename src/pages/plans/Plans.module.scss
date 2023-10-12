@@ -1,21 +1,48 @@
 @import "/src/_variables.scss";
 
-main {
+.mainContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
   row-gap: 1.5rem;
   width: 100%;
+
+  .titleContainer {
+    position: relative;
+    width: 100%;
+    margin-bottom: 5rem;
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    img {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-10%, -35%);
+      user-select: none;
+    }
+  }
 
   .plansSection {
     display: flex;
     flex-direction: column;
+    align-items: center;
     row-gap: 8.5rem;
+    width: 100%;
+    margin-bottom: 8.5rem;
 
     .planContainer {
       position: relative;
       display: flex;
       flex-direction: column;
       row-gap: 1.5rem;
+      width: 100%;
 
       h2 {
         font-family: "Montserrat", sans-serif;
@@ -67,5 +94,13 @@ main {
         border-radius: 4.5rem 0 0 4.5rem;
       }
     }
+  }
+
+  .divider {
+    max-width: 40rem;
+    width: 100%;
+    height: 0.0625rem;
+    background-color: $primary;
+    margin: 0 1rem;
   }
 }

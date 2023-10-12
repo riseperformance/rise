@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import styles from "./Plans.module.scss";
+import blurDiamondVariant from "/blur_diamond_variant.svg";
+import { PlanRefund } from "../home/components/plan-refund/PlanRefund";
 
 type Plan = {
   title: string;
@@ -88,8 +90,11 @@ export const Plans = () => {
   }, []);
 
   return (
-    <main>
-      <h1>Conheça nossos pacotes!</h1>
+    <main className={styles.mainContainer}>
+      <div className={styles.titleContainer}>
+        <h1>Conheça nossos pacotes!</h1>
+        <img src={blurDiamondVariant} alt="" draggable={false} />
+      </div>
 
       <section className={styles.plansSection}>
         {plans.map((plan, planIndex) => (
@@ -118,7 +123,11 @@ export const Plans = () => {
             ) : undefined}
           </div>
         ))}
+
+        <div className={styles.divider} />
       </section>
+      
+      <PlanRefund />
     </main>
   );
 };
