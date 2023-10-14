@@ -18,8 +18,16 @@ export const DexaScan = () => {
       .get("font-size") as CSSUnitValue;
 
     const fontSize = computedFontSize.value;
-    const width = document.body.clientWidth / fontSize;
-    const widthPadding = 80 / fontSize;
+    const scrollbarWidth = 0.5;
+    const width = document.body.clientWidth / fontSize - scrollbarWidth;
+    const widthPadding =
+      document.body.clientWidth > 1164
+        ? 5
+        : document.body.clientWidth > 936
+        ? 4
+        : document.body.clientWidth > 620
+        ? 3
+        : 2;
     const bannerWidth = 490 / fontSize;
 
     if (width <= 90) {

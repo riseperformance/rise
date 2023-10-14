@@ -8,8 +8,88 @@ import { MenuButton } from "@mui/base/MenuButton";
 import { MenuItem, menuItemClasses } from "@mui/base/MenuItem";
 import { styled } from "@mui/system";
 import checkSvg from "/check.svg";
+import { Fragment, useEffect, useState } from "react";
+import { Drawer, IconButton } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import { DrawerContent } from "./components/drawer-content/DrawerContent";
 
 export const Header = () => {
+  const [isWeb, setIsWeb] = useState(true);
+  const [drawerState, setDrawerState] = useState(false);
+
+  const toggleDrawer =
+    (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event.type === "keydown" &&
+        ((event as React.KeyboardEvent).key === "Tab" ||
+          (event as React.KeyboardEvent).key === "Shift")
+      ) {
+        return;
+      }
+
+      setDrawerState(open);
+    };
+
+  const checkIsWeb = () => {
+    const isWeb = document.body.clientWidth > 474;
+    setIsWeb(isWeb);
+  };
+
+  const webNavigationList = (
+    <nav>
+      <ul>
+        <li>
+          <Link className={classNames(styles.link)} to="consultas">
+            Consulta
+          </Link>
+        </li>
+        <li>
+          <Link className={classNames(styles.link)} to="planos">
+            Planos
+          </Link>
+        </li>
+        <li>
+          <Dropdown>
+            <TriggerButton
+              className={classNames(styles.link)}
+              aria-haspopup="true"
+            >
+              Nossos Exames
+            </TriggerButton>
+
+            <Menu slots={{ listbox: StyledListbox }}>
+              <Link className={styles.link} to="exames/dexascan">
+                <StyledMenuItem>
+                  DEXA Scan <img src={checkSvg} draggable={false} />
+                </StyledMenuItem>
+              </Link>
+              <Link className={styles.link} to="exames/calorimetria">
+                <StyledMenuItem>Calorimetria</StyledMenuItem>
+              </Link>
+            </Menu>
+          </Dropdown>
+        </li>
+      </ul>
+    </nav>
+  );
+
+  const mobileNavigationList = (
+    <Fragment key="drawer">
+      <IconButton className={styles.drawerButton} onClick={toggleDrawer(true)}>
+        <MenuIcon />
+      </IconButton>
+      <Drawer anchor="right" open={drawerState} onClose={toggleDrawer(false)}>
+        <DrawerContent closeDrawer={toggleDrawer(false)} />
+      </Drawer>
+    </Fragment>
+  );
+
+  useEffect(() => {
+    checkIsWeb();
+    window.addEventListener("resize", checkIsWeb);
+    return () => window.removeEventListener("resize", checkIsWeb);
+  }, []);
+
   return (
     <>
       <header className={styles.header}>
@@ -17,41 +97,7 @@ export const Header = () => {
           <img src={logo} alt="Logo" />
         </Link>
 
-        <nav>
-          <ul>
-            <li>
-              <Link className={classNames(styles.link)} to="consultas">
-                Consulta
-              </Link>
-            </li>
-            <li>
-              <Link className={classNames(styles.link)} to="planos">
-                Planos
-              </Link>
-            </li>
-            <li>
-              <Dropdown>
-                <TriggerButton
-                  className={classNames(styles.link)}
-                  aria-haspopup="true"
-                >
-                  Nossos Exames
-                </TriggerButton>
-
-                <Menu slots={{ listbox: StyledListbox }}>
-                  <Link className={styles.link} to="exames/dexascan">
-                    <StyledMenuItem>
-                      DEXA Scan <img src={checkSvg} draggable={false} />
-                    </StyledMenuItem>
-                  </Link>
-                  <Link className={styles.link} to="exames/calorimetria">
-                    <StyledMenuItem>Calorimetria</StyledMenuItem>
-                  </Link>
-                </Menu>
-              </Dropdown>
-            </li>
-          </ul>
-        </nav>
+        {isWeb ? webNavigationList : mobileNavigationList}
       </header>
       <Outlet />
     </>

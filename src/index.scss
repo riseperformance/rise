@@ -23,6 +23,22 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  @media (max-width: 1300px) {
+    font-size: 15px;
+  }
+  
+  @media (max-width: 1164px) {
+    font-size: 14px;
+  }
+  
+  @media (max-width: 936px) {
+    font-size: 13px;
+  }
+  
+  @media (max-width: 620px) {
+    font-size: 12px;
+  }
 }
 
 * {

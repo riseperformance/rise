@@ -1,0 +1,48 @@
+@import "/src/_variables.scss";
+
+.drawerContent {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 75vw;
+  height: 100%;
+  padding: 3rem 2rem;
+  background-color: $surface;
+
+  .closeDrawerButton {
+    align-self: flex-end;
+    width: 4rem;
+    height: 4rem;
+    margin-top: 2rem;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    li {
+      list-style: none;
+
+      .link {
+        font-size: 2rem;
+        font-weight: 400;
+        text-decoration: none;
+        color: $onSurface;
+      }
+    }
+
+    span {
+      font-size: 1rem;
+      font-weight: 400;
+      opacity: 0.5;
+      margin-top: 1rem;
+      color: $onSurface;
+    }
+  }
+}
