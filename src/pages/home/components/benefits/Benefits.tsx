@@ -71,7 +71,12 @@ export const Benefits = () => {
 
       <div className={styles.benefitsContainer}>
         {benefits.map((benefit, index) => (
-          <div key={index} className={styles.benefitContent}>
+          <div
+            key={index}
+            className={styles.benefitContent}
+            data-aos="fade-right"
+            data-aos-delay={index * 150}
+          >
             <img src={benefit.src} alt={benefit.alt} />
             <span>{benefit.description}</span>
           </div>

@@ -4,7 +4,6 @@ import card02 from "/images/card_02.png";
 import card03 from "/images/card_03.png";
 
 export const Advertising = () => {
-
   const cards = [
     {
       src: card01,
@@ -26,18 +25,17 @@ export const Advertising = () => {
     },
   ];
 
-
   return (
     <>
       <section className={styles.advertisingContainer}>
-        <span>
+        <span data-aos="fade-right">
           Lifestyle,
           <br />
           Performance,
           <br />
           Health.
         </span>
-        <span>
+        <span data-aos="fade-left">
           Fitness
           <br />
           Life
@@ -46,7 +44,12 @@ export const Advertising = () => {
 
       <section className={styles.advertisingCardsContainer}>
         {cards.map((card, index) => (
-          <div key={index} className={styles.card}>
+          <div
+            key={index}
+            className={styles.card}
+            data-aos="fade-left"
+            data-aos-delay={index * 150}
+          >
             <img src={card.src} alt={card.alt} draggable={false} />
             <p>{card.description}</p>
           </div>

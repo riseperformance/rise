@@ -20,7 +20,7 @@ export const Goals = () => {
           ))}
         </ul>
 
-        <img src={goal01} alt="Goal 01" />
+        <img src={goal01} alt="Goal 01" data-aos="zoom-out-left" />
       </div>
 
       <h3>

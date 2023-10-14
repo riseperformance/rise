@@ -20,34 +20,34 @@ export const Calorimetria = () => {
 
       <section className={styles.calorimetriaSection}>
         <div className={styles.examContainer}>
-          <h2>
+          <h2 data-aos="fade-right">
             Calorimetria <span>em repouso</span>
           </h2>
-          <p>
+          <p data-aos="fade-right" data-aos-delay="50">
             Analisador a taxa metabólico basal em estado de repouso do paciente
             por meio da troca gasosa.
           </p>
-          <span>
+          <span data-aos="fade-right" data-aos-delay="100">
             Auxilia na elaboração do plano alimentar ideal para cada paciente.
           </span>
         </div>
 
         <div className={styles.examContainer}>
-          <h2>
+          <h2 data-aos="fade-right">
             Calorimetria <span>em esforço</span>
           </h2>
-          <p>
+          <p data-aos="fade-right" data-aos-delay="50">
             Teste de esforço máximo com analisador metabólico para determinar
             VO2 Max e limiares metabólicos.
           </p>
-          <span>
+          <span data-aos="fade-right" data-aos-delay="100">
             Auxilia na prescrição das zonas de treinamento e intensidade de
             treino.
           </span>
         </div>
       </section>
 
-      <section className={styles.imagesSection}>
+      <section className={styles.imagesSection} data-aos="zoom-out-down">
         <img src={calorimetriaImage01} alt="Calorimetria 01" />
         <img src={calorimetriaImage02} alt="Calorimetria 02" />
         <img src={calorimetriaImage03} alt="Calorimetria 03" />

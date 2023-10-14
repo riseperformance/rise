@@ -58,15 +58,17 @@ export const DexaScan = () => {
       </div>
 
       <section className={styles.goalSection}>
-        <h2>Qual é o objetivo?</h2>
-        <p>
+        <h2 data-aos="fade-right">Qual é o objetivo?</h2>
+        <p data-aos="fade-right" data-aos-delay="50">
           O exame mede com alta precisão a massa dos tecidos muscular, ósseo e
           adiposo do corpo todo e dos membros separadamente.
         </p>
-        <span>Padrão Ouro na qualidade e confiança de resultados!</span>
+        <span data-aos="fade-right" data-aos-delay="100">
+          Padrão Ouro na qualidade e confiança de resultados!
+        </span>
       </section>
 
-      <section className={styles.imagesSection}>
+      <section className={styles.imagesSection} data-aos="zoom-out-down">
         <img src={dexaScanImage01} alt="Dexa Scan 01" />
         <img src={dexaScanImage02} alt="Dexa Scan 02" />
         <img src={dexaScanImage03} alt="Dexa Scan 03" />

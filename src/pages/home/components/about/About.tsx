@@ -49,7 +49,7 @@ export const About = () => {
       <h2>Conheça seu médico:</h2>
 
       <div className={styles.aboutContainer}>
-        <img src={about01} alt="Dr. André" />
+        <img src={about01} alt="Dr. André" data-aos="zoom-out-right" />
         <div className={styles.aboutContent}>
           <h3 style={banneStyle}>
             Dr. André Scardovelli

@@ -34,6 +34,7 @@ export const Reviews = () => {
         className={styles.swiperContainer}
         spaceBetween={48}
         slidesPerView={2.1}
+        data-aos="fade-left"
       >
         {reviews.map((review, index) => (
           <SwiperSlide key={index}>

@@ -26,6 +26,7 @@ export const Address = () => {
         allowFullScreen={true}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
+        data-aos="zoom-out-down"
       ></iframe>
 
       <div className={styles.divider} />

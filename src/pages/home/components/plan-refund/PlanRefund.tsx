@@ -54,7 +54,13 @@ export const PlanRefund = () => {
       <h2>Solicite o reemsolso pelo seu plano:</h2>
       <div className={styles.plansContainer}>
         {plans.map((plan, index) => (
-          <img key={index} src={plan.src} alt={plan.alt} />
+          <img
+            key={index}
+            src={plan.src}
+            alt={plan.alt}
+            data-aos="zoom-out-down"
+            data-aos-delay={index * 100}
+          />
         ))}
       </div>
 

@@ -1,3 +1,5 @@
+"use client";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
 import { Header } from "./components/header/Header";
@@ -7,6 +9,9 @@ import { Appointments } from "./pages/appointments/Appointments";
 import { Plans } from "./pages/plans/Plans";
 import { DexaScan } from "./pages/exams/dexa-scan/DexaScan";
 import { Calorimetria } from "./pages/exams/calorimetria/Calorimetria";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 declare module "@mui/material/styles" {
   interface Palette {
@@ -49,6 +54,10 @@ function App() {
       }),
     },
   });
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>

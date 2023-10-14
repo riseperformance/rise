@@ -110,10 +110,12 @@ export const Plans = () => {
       <section className={styles.plansSection}>
         {plans.map((plan, planIndex) => (
           <div key={planIndex} className={styles.planContainer}>
-            <h2>{plan.title}</h2>
-            {plan.description ? <p>{plan.description}</p> : undefined}
+            <h2 data-aos="fade-right">{plan.title}</h2>
+            {plan.description ? (
+              <p data-aos="fade-right">{plan.description}</p>
+            ) : undefined}
             {plan.benefits.length > 0 ? (
-              <ul>
+              <ul data-aos="fade-right">
                 {plan.benefits.map((benefit, benefitIndex) => (
                   <li key={benefitIndex}>{benefit}</li>
                 ))}
@@ -140,12 +142,12 @@ export const Plans = () => {
       <section className={styles.plansSection}>
         {monitoring.map((monitoring, monitoringIndex) => (
           <div key={monitoringIndex} className={styles.planContainer}>
-            <h2>{monitoring.title}</h2>
+            <h2 data-aos="fade-right">{monitoring.title}</h2>
             {monitoring.description ? (
-              <p>{monitoring.description}</p>
+              <p data-aos="fade-right">{monitoring.description}</p>
             ) : undefined}
             {monitoring.benefits.length > 0 ? (
-              <ul>
+              <ul data-aos="fade-right">
                 {monitoring.benefits.map((benefit, benefitIndex) => (
                   <li key={benefitIndex}>{benefit}</li>
                 ))}
