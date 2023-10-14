@@ -63,7 +63,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Header />}>
+          <Route path="rise" element={<Header />}>
             <Route index element={<Home />} />
             <Route path="consultas" element={<Appointments />} />
             <Route path="planos" element={<Plans />} />
