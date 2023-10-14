@@ -7,6 +7,7 @@ import { Menu } from "@mui/base/Menu";
 import { MenuButton } from "@mui/base/MenuButton";
 import { MenuItem, menuItemClasses } from "@mui/base/MenuItem";
 import { styled } from "@mui/system";
+import checkSvg from "/check.svg";
 
 export const Header = () => {
   return (
@@ -40,7 +41,7 @@ export const Header = () => {
                 <Menu slots={{ listbox: StyledListbox }}>
                   <Link className={styles.link} to="exames/dexascan">
                     <StyledMenuItem>
-                      DEXA Scan <img src="/check.svg" draggable={false} />
+                      DEXA Scan <img src={checkSvg} draggable={false} />
                     </StyledMenuItem>
                   </Link>
                   <Link className={styles.link} to="exames/calorimetria">
