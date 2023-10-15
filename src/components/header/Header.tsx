@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import styles from "./Header.module.scss";
 import logo from "/logo.png";
 import { classNames } from "../../helpers/classnames";
@@ -16,6 +16,7 @@ import { DrawerContent } from "./components/drawer-content/DrawerContent";
 export const Header = () => {
   const [isWeb, setIsWeb] = useState(true);
   const [drawerState, setDrawerState] = useState(false);
+  const location = useLocation();
 
   const toggleDrawer =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -39,31 +40,66 @@ export const Header = () => {
     <nav>
       <ul>
         <li>
-          <Link className={classNames(styles.link)} to="consultas">
+          <Link
+            className={classNames(
+              styles.link,
+              location.pathname.includes("consultas")
+                ? styles.actived
+                : undefined
+            )}
+            to="consultas"
+          >
             Consulta
           </Link>
         </li>
         <li>
-          <Link className={classNames(styles.link)} to="planos">
+          <Link
+            className={classNames(
+              styles.link,
+              location.pathname.includes("planos") ? styles.actived : undefined
+            )}
+            to="planos"
+          >
             Planos
           </Link>
         </li>
         <li>
           <Dropdown>
             <TriggerButton
-              className={classNames(styles.link)}
+              className={classNames(
+                styles.link,
+                location.pathname.includes("exames")
+                  ? styles.actived
+                  : undefined
+              )}
               aria-haspopup="true"
             >
               Nossos Exames
             </TriggerButton>
 
             <Menu slots={{ listbox: StyledListbox }}>
-              <Link className={styles.link} to="exames/dexascan">
+              <Link
+                className={classNames(
+                  styles.link,
+                  location.pathname.includes("dexascan")
+                    ? styles.actived
+                    : undefined
+                )}
+                to="exames/dexascan"
+              >
                 <StyledMenuItem>
                   DEXA Scan <img src={checkSvg} draggable={false} />
                 </StyledMenuItem>
               </Link>
-              <Link className={styles.link} to="exames/calorimetria">
+              <Link
+                className={classNames(
+                  styles.link,
+                  location.pathname.includes("calorimetria")
+                    ? styles.actived
+                    : undefined
+                )}
+                to="exames/calorimetria"
+              >
                 <StyledMenuItem>Calorimetria</StyledMenuItem>
               </Link>
             </Menu>
@@ -93,7 +129,7 @@ export const Header = () => {
   return (
     <>
       <header className={styles.header}>
-        <Link to="">
+        <Link to="/rise/">
           <img src={logo} alt="Logo" />
         </Link>
 

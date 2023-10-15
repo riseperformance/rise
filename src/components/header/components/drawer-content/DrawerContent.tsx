@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./DrawerContent.module.scss";
 import { classNames } from "../../../../helpers/classnames";
 import checkSvg from "/check.svg";
@@ -10,6 +10,8 @@ type Props = {
 };
 
 export const DrawerContent = (props: Props) => {
+  const location = useLocation();
+
   return (
     <nav className={styles.drawerContent}>
       <IconButton
@@ -22,7 +24,12 @@ export const DrawerContent = (props: Props) => {
       <ul>
         <li>
           <Link
-            className={classNames(styles.link)}
+            className={classNames(
+              styles.link,
+              location.pathname.includes("consultas")
+                ? styles.actived
+                : undefined
+            )}
             to="consultas"
             onClick={props.closeDrawer}
           >
@@ -32,7 +39,10 @@ export const DrawerContent = (props: Props) => {
 
         <li>
           <Link
-            className={classNames(styles.link)}
+            className={classNames(
+              styles.link,
+              location.pathname.includes("planos") ? styles.actived : undefined
+            )}
             to="planos"
             onClick={props.closeDrawer}
           >
@@ -43,7 +53,12 @@ export const DrawerContent = (props: Props) => {
         <span>Nossos Exames</span>
         <li>
           <Link
-            className={classNames(styles.link)}
+            className={classNames(
+              styles.link,
+              location.pathname.includes("dexascan")
+                ? styles.actived
+                : undefined
+            )}
             to="exames/dexascan"
             onClick={props.closeDrawer}
           >
@@ -53,7 +68,12 @@ export const DrawerContent = (props: Props) => {
 
         <li>
           <Link
-            className={classNames(styles.link)}
+            className={classNames(
+              styles.link,
+              location.pathname.includes("calorimetria")
+                ? styles.actived
+                : undefined
+            )}
             to="exames/calorimetria"
             onClick={props.closeDrawer}
           >

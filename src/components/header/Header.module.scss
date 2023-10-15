@@ -29,6 +29,11 @@
       color: $onSurface;
       text-decoration: none;
       cursor: pointer;
+
+      &.actived {
+        color: $primaryVariant;
+        font-weight: 400;
+      }
     }
   }
 
