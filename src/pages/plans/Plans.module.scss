@@ -13,7 +13,7 @@
     margin-bottom: 5rem;
 
     h1 {
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-size: 2.625rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -45,11 +45,12 @@
       width: 100%;
 
       h2 {
+        max-width: 64%;
         font-family: "Montserrat", sans-serif;
         font-size: 3.25rem;
         font-weight: 600;
         text-transform: uppercase;
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
       }
 
       p {
@@ -92,6 +93,26 @@
         padding: 2rem 0rem 2rem 2.5rem;
         background-color: $container;
         border-radius: 4.5rem 0 0 4.5rem;
+      }
+
+      @media (max-width: 1164px) {
+        h2 {
+          max-width: 100%;
+        }
+
+        .durationBanner {
+          top: 8.5rem;
+        }
+
+        .spacer {
+          height: 6.5rem;
+        }
+      }
+
+      @media (max-width: 744px) {
+        h2 {
+          font-size: 2.75rem;
+        }
       }
     }
   }

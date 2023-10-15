@@ -13,7 +13,7 @@
     top: 0;
     left: 0;
     font-size: 2.25rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
     text-transform: uppercase;
     padding: 2.25rem;
@@ -23,7 +23,7 @@
 
   .benefitsContainer {
     display: flex;
-    column-gap: 5rem;
+    gap: 5rem;
     justify-content: space-around;
     align-items: center;
     width: 100%;
@@ -48,6 +48,28 @@
         font-size: 2rem;
         font-weight: 200;
         text-align: center;
+      }
+    }
+
+    @media (max-width: 1164px) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 620px) {
+      gap: 1.5rem;
+
+      .benefitContent {
+        row-gap: 1rem;
+
+        img {
+          width: 8rem;
+          height: 8rem;
+        }
+
+        span {
+          max-width: 14rem;
+          font-size: 1.5rem;
+        }
       }
     }
   }

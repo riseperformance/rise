@@ -71,13 +71,34 @@
 
   .imagesSection {
     display: flex;
-    column-gap: 2rem;
+    justify-content: center;
     align-items: center;
+    gap: 2rem;
     width: 100%;
 
     img {
       width: 100%;
       border-radius: 1.5rem;
+    }
+
+    @media (max-width: 1300px) {
+      flex-wrap: wrap;
+      
+      img {
+        width: calc(50% - 2rem);
+      }
+    }
+
+    @media (max-width: 936px) {
+      img {
+        width: 75%;
+      }
+    }
+
+    @media (max-width: 620px) {
+      img {
+        width: 100%;
+      }
     }
   }
 

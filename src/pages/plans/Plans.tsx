@@ -79,11 +79,11 @@ export const Plans = () => {
     const scrollbarWidth = 0.5;
     const width = document.body.clientWidth / fontSize - scrollbarWidth;
     const widthPadding =
-      document.body.clientWidth > 1164
+      document.body.clientWidth > 1157
         ? 5
-        : document.body.clientWidth > 936
+        : document.body.clientWidth > 930
         ? 4
-        : document.body.clientWidth > 620
+        : document.body.clientWidth > 614
         ? 3
         : 2;
     const bannerWidth = 500 / fontSize;
@@ -119,6 +119,14 @@ export const Plans = () => {
         {plans.map((plan, planIndex) => (
           <div key={planIndex} className={styles.planContainer}>
             <h2 data-aos="fade-right">{plan.title}</h2>
+            {plan.duration ? (
+              <>
+                <span style={banneStyle} className={styles.durationBanner}>
+                  Duração: {plan.duration}
+                </span>
+                <div className={styles.spacer} />
+              </>
+            ) : undefined}
             {plan.description ? (
               <p data-aos="fade-right">{plan.description}</p>
             ) : undefined}
@@ -137,11 +145,6 @@ export const Plans = () => {
                 </a>
               </span>
             ) : undefined}
-            {plan.duration ? (
-              <span style={banneStyle} className={styles.durationBanner}>
-                Duração: {plan.duration}
-              </span>
-            ) : undefined}
           </div>
         ))}
         <div className={styles.divider} />
@@ -151,6 +154,14 @@ export const Plans = () => {
         {monitoring.map((monitoring, monitoringIndex) => (
           <div key={monitoringIndex} className={styles.planContainer}>
             <h2 data-aos="fade-right">{monitoring.title}</h2>
+            {monitoring.duration ? (
+              <>
+                <span style={banneStyle} className={styles.durationBanner}>
+                  Duração: {monitoring.duration}
+                </span>
+                <div className={styles.spacer} />
+              </>
+            ) : undefined}
             {monitoring.description ? (
               <p data-aos="fade-right">{monitoring.description}</p>
             ) : undefined}
@@ -167,11 +178,6 @@ export const Plans = () => {
                 <a href={monitoring.link} target="_blank">
                   Clique aqui
                 </a>
-              </span>
-            ) : undefined}
-            {monitoring.duration ? (
-              <span style={banneStyle} className={styles.durationBanner}>
-                Duração: {monitoring.duration}
               </span>
             ) : undefined}
           </div>

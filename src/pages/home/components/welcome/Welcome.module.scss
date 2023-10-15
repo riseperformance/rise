@@ -58,4 +58,13 @@
     transform: translateY(-50%);
     user-select: none;
   }
+
+  @media (max-width: 620px) {
+    flex-direction: column;
+    row-gap: 2rem;
+
+    .callTheActionContainer {
+      max-width: 100%;
+    }
+  }
 }

@@ -32,8 +32,18 @@ export const Reviews = () => {
       <h2>O que nossos pacientes dizem:</h2>
       <Swiper
         className={styles.swiperContainer}
-        spaceBetween={48}
-        slidesPerView={2.1}
+        spaceBetween={16}
+        slidesPerView={1.1}
+        breakpoints={{
+          1164: {
+            slidesPerView: 2.1,
+            spaceBetween: 48,
+          },
+          620: {
+            slidesPerView: 1.15,
+            spaceBetween: 24,
+          }
+        }}
         data-aos="fade-left"
       >
         {reviews.map((review, index) => (

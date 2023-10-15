@@ -27,6 +27,14 @@
       width: calc(100% / 3 - 5rem);
       object-fit: scale-down;
     }
+
+    @media (max-width: 620px) {
+      row-gap: 2rem;
+      
+      img {
+        width: calc(100% / 2 - 5rem);
+      }
+    }
   }
 
   .divider {

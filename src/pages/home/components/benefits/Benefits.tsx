@@ -42,11 +42,11 @@ export const Benefits = () => {
     const scrollbarWidth = 0.5;
     const width = document.body.clientWidth / fontSize - scrollbarWidth;
     const widthPadding =
-      document.body.clientWidth > 1164
+      document.body.clientWidth > 1157
         ? 5
-        : document.body.clientWidth > 936
+        : document.body.clientWidth > 930
         ? 4
-        : document.body.clientWidth > 620
+        : document.body.clientWidth > 614
         ? 3
         : 2;
     const bannerWidth = 660 / fontSize;

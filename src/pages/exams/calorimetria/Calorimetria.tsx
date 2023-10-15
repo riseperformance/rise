@@ -9,7 +9,7 @@ export const Calorimetria = () => {
   return (
     <main className={styles.mainContainer}>
       <div className={styles.titleContainer}>
-        <h1>Colorimetria</h1>
+        <h1>Calorimetria</h1>
         <img
           className={styles.diamondBlurImage}
           src={blurDiamondVariant}

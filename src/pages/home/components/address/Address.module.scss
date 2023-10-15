@@ -19,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 3.5rem;
+    gap: 3.5rem;
     margin-bottom: 5rem;
 
     span {
@@ -29,10 +29,24 @@
       font-weight: 300;
       text-align: center;
     }
+
+    @media (max-width: 1164px) {
+      img {
+        height: 10rem;
+      }
+    }
+
+    @media (max-width: 620px) {
+      flex-direction: column-reverse;
+    }
   }
 
   iframe {
     margin-bottom: 10rem;
+    
+    @media (max-width: 620px) {
+      height: 20rem;
+    }
   }
 
   .divider {

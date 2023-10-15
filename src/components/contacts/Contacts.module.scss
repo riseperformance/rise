@@ -18,7 +18,7 @@
   .contactsContainer {
     display: flex;
     align-items: center;
-    column-gap: 3rem;
+    gap: 3rem;
     margin-bottom: 10rem;
 
     .divider {
@@ -69,6 +69,21 @@
             background-image: url(/phone.svg);
           }
         }
+      }
+    }
+
+    @media (max-width: 620px) {
+      flex-direction: column-reverse;
+      
+      .divider {
+        max-width: 15.5rem;
+        width: 100%;
+        height: 0.0625rem;
+        background-color: $onSurface;
+      }
+
+      img {
+        width: 50%;
       }
     }
   }

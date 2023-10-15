@@ -18,12 +18,13 @@
   .aboutContainer {
     display: flex;
     justify-content: space-between;
-    column-gap: 5rem;
+    gap: 5rem;
     width: 100%;
     margin-bottom: 10rem;
 
     img {
       border-radius: 1.5rem 0 1.5rem 0;
+      object-fit: cover;
     }
 
     .aboutContent {
@@ -80,6 +81,40 @@
           background-repeat: no-repeat;
           background-position: center;
         }
+      }
+    }
+
+    @media (max-width: 1300px) {
+      margin-top: 4rem;
+      gap: 2rem;
+
+      .aboutContent {
+        padding-top: 0;
+
+        h3 {
+          top: -8rem;
+        }
+      }
+    }
+
+    @media (max-width: 936px) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0;
+
+      img {
+        width: 60%;
+        height: 40rem;
+      }
+    }
+
+    @media (max-width: 620px) {
+      img {
+        width: 100%;
+      }
+
+      .aboutContent {
+        padding-top: 2rem;
       }
     }
   }
