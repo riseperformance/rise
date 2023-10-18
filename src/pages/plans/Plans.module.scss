@@ -13,9 +13,12 @@
     margin-bottom: 5rem;
 
     h1 {
+      max-width: 48rem;
+      width: 100%;
       font-family: "Montserrat", sans-serif;
       font-size: 2.625rem;
       font-weight: 700;
+      text-align: center;
       text-transform: uppercase;
     }
 
@@ -24,7 +27,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      transform: translate(-10%, -35%);
+      transform: translateY(-35%);
       user-select: none;
     }
   }

@@ -1,0 +1,118 @@
+@import "/src/_variables.scss";
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 7.5rem;
+  width: 100%;
+
+  .titleContainer {
+    position: relative;
+    align-self: start;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    h1 {
+      max-width: 48rem;
+      width: 100%;
+      font-family: "Montserrat", sans-serif;
+      font-size: 2.625rem;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .diamondBlurImage {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-35%);
+      user-select: none;
+    }
+  }
+
+  .aboutSection {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    .aboutContainer {
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        font-size: 2.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      span {
+        font-size: 2rem;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        font-size: 2rem;
+        margin-top: 2.5rem;
+      }
+    }
+
+    img {
+      max-width: 24.5rem;
+      width: 100%;
+      height: auto;
+      border-radius: 0.75rem;
+    }
+
+    @media (max-width: 936px) {
+      flex-direction: column;
+    }
+  }
+
+  .howItWorksSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 7.25rem;
+    width: 100%;
+    padding: 11rem 0 0 0;
+
+    h2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 2.25rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 2.25rem;
+      background-color: $container;
+      border-radius: 0 4.5rem 4.5rem 0;
+    }
+
+    p {
+      font-size: 2.25rem;
+    }
+
+    .scheduleExamButton {
+      max-width: 38rem;
+      width: 100%;
+      min-height: 4rem;
+      border-radius: 2rem;
+      font-size: 1.75rem;
+      text-transform: initial;
+    }
+  }
+
+  .divider {
+    max-width: 40rem;
+    width: 100%;
+    height: 0.0625rem;
+    background-color: $primary;
+    margin: 0 1rem;
+  }
+}
