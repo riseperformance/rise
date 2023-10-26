@@ -55,8 +55,6 @@ function App() {
     AOS.init();
   }, []);
 
-  console.log(routes);
-
   return (
     <ThemeProvider theme={theme}>
       <Header />
