@@ -111,7 +111,7 @@ export const Header = () => {
 
   const mobileNavigationList = (
     <Fragment key="drawer">
-      <IconButton className={styles.drawerButton} onClick={toggleDrawer(true)}>
+      <IconButton title="Menu de Navegação" className={styles.drawerButton} onClick={toggleDrawer(true)}>
         <MenuIcon />
       </IconButton>
       <Drawer anchor="right" open={drawerState} onClose={toggleDrawer(false)}>
