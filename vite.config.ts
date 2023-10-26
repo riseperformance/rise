@@ -22,7 +22,7 @@ export default defineConfig({
     }),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["alter_logo.svg"],
+      includeAssets: ["alter_logo.svg", "android-chrome-192x192.png", "android-chrome-512x512.png"],
       manifest: {
         name: "Rise Health",
         short_name: "Rise",
@@ -30,12 +30,12 @@ export default defineConfig({
         theme_color: "#051621",
         icons: [
           {
-            src: "alter_logo.svg",
+            src: "android-chrome-192x192.png",
             sizes: "192x192",
             type: "image/svg+xml",
           },
           {
-            src: "alter_logo.svg",
+            src: "android-chrome-512x512.png",
             sizes: "512x512",
             type: "image/svg+xml",
           },
