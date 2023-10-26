@@ -22,20 +22,20 @@ export default defineConfig({
     }),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["vite.svg"],
+      includeAssets: ["alter_logo.svg"],
       manifest: {
-        name: "My Awesome App",
-        short_name: "MyApp",
-        description: "My Awesome App description",
-        theme_color: "#ffffff",
+        name: "Rise Health",
+        short_name: "Rise",
+        description: "Transformando sua rotina em uma rotina mais saudável.",
+        theme_color: "#051621",
         icons: [
           {
-            src: "vite.svg",
+            src: "alter_logo.svg",
             sizes: "192x192",
             type: "image/svg+xml",
           },
           {
-            src: "vite.svg",
+            src: "alter_logo.svg",
             sizes: "512x512",
             type: "image/svg+xml",
           },

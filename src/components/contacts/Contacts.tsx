@@ -1,5 +1,5 @@
 import styles from "./Contacts.module.scss";
-import alternativeLogo from "/alter_logo.png";
+import alternativeLogo from "/alter_logo.svg";
 
 type Props = {
   showTitle?: boolean;

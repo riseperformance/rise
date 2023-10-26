@@ -1,12 +1,26 @@
 import styles from "./Reviews.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import thomazNunesImage from "/reviews/thomaz_nunes.png";
+import lincolnJuniorImage from "/reviews/lincoln_junior.png";
 import joaoGabrielMeloImage from "/reviews/joao_gabriel_melo.png";
 import rafaelTrombetaImage from "/reviews/rafael_trombeta.png";
 import { Button } from "@mui/material";
 
 export const Reviews = () => {
   const reviews = [
+    {
+      image: thomazNunesImage,
+      name: "Thomaz Nunes",
+      review:
+        "Uma experiência incrível para você atleta de ponta e desportistas que está a procura de melhora de desempenho e performance. Agradeço a clínica Rise Health e o Dr André Scardovelli por me proporcionarem a minha evolução",
+    },
+    {
+      image: lincolnJuniorImage,
+      name: "Lincoln Junior",
+      review:
+        "Muito obrigado, Dr. André Scardovelli! Sua paixão pela medicina esportiva e cuidado personalizado elevaram minha performance a patamares que eu nunca poderia imaginar. Agradeço de coração por sua expertise e empatia.",
+    },
     {
       image: joaoGabrielMeloImage,
       name: "João Gabriel Melo",
@@ -17,13 +31,7 @@ export const Reviews = () => {
       image: rafaelTrombetaImage,
       name: "Rafael Trombeta",
       review:
-        "Parabéns pelo trabalho que vocês estão realizando.Trabalho feito com muito profissionalismo e competência. Os aparelhos do apoio diagnóstico que não se encontram pela nossa região.  Estou muito feliz com os resultados. Só tenho a agradecer!",
-    },
-    {
-      image: rafaelTrombetaImage,
-      name: "Amigo do Rafael Trombeta",
-      review:
-        "Parabéns pelo trabalho que vocês estão realizando.Trabalho feito com muito profissionalismo e competência. Os aparelhos do apoio diagnóstico que não se encontram pela nossa região.  Estou muito feliz com os resultados. Só tenho a agradecer!",
+        "Parabéns pelo trabalho que vocês estão realizando.Trabalho feito com muito profissionalismo e competência. Os aparelhos do apoio diagnóstico que não se encontram pela nossa região. Estou muito feliz com os resultados. Só tenho a agradecer!",
     },
   ];
 

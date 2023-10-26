@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /
 
-Sitemap: https://wuerta.github.io/sitemap.xml
+Sitemap: https://wuerta.github.io//sitemap.xml

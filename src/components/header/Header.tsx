@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import styles from "./Header.module.scss";
-import logo from "/logo.png";
+import logo from "/logo.svg";
 import { classNames } from "../../helpers/classnames";
 import { Dropdown } from "@mui/base/Dropdown";
 import { Menu } from "@mui/base/Menu";
