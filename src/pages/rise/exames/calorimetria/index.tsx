@@ -1,11 +1,12 @@
 import { Button } from "@mui/material";
-import styles from "./Calorimetria.module.scss";
+import styles from "./styles.module.scss";
 import blurDiamondVariant from "/blur_diamond_variant.svg";
 import calorimetriaImage01 from "/images/calorimetria_01.png";
 import calorimetriaImage02 from "/images/calorimetria_02.png";
 import calorimetriaImage03 from "/images/calorimetria_03.png";
+import { FC } from "react";
 
-export const Calorimetria = () => {
+const Calorimetria: FC = () => {
   return (
     <main className={styles.mainContainer}>
       <div className={styles.titleContainer}>
@@ -63,3 +64,5 @@ export const Calorimetria = () => {
     </main>
   );
 };
+
+export default Calorimetria;

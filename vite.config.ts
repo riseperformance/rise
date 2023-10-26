@@ -9,7 +9,16 @@ export default defineConfig({
   plugins: [
     react(),
     Pages({
-      onRoutesGenerated: (routes) => generateSitemap({ routes }),
+      resolver: "react",
+      exclude: ["rise/components"],
+      onRoutesGenerated: (routes) => {
+        generateSitemap({
+          hostname: "https://wuerta.github.io//",
+          routes,
+          allowRobots: false,
+        });
+      },
     }),
+    ,
   ],
 });

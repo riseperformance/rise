@@ -47,7 +47,7 @@ export const Header = () => {
                 ? styles.actived
                 : undefined
             )}
-            to="consultas"
+            to="rise/consultas"
           >
             Consulta
           </Link>
@@ -58,7 +58,7 @@ export const Header = () => {
               styles.link,
               location.pathname.includes("planos") ? styles.actived : undefined
             )}
-            to="planos"
+            to="rise/planos"
           >
             Planos
           </Link>
@@ -85,7 +85,7 @@ export const Header = () => {
                     ? styles.actived
                     : undefined
                 )}
-                to="exames/dexascan"
+                to="rise/exames/dexascan"
               >
                 <StyledMenuItem>
                   DEXA Scan <img src={checkSvg} draggable={false} />
@@ -98,7 +98,7 @@ export const Header = () => {
                     ? styles.actived
                     : undefined
                 )}
-                to="exames/calorimetria"
+                to="rise/exames/calorimetria"
               >
                 <StyledMenuItem>Calorimetria</StyledMenuItem>
               </Link>

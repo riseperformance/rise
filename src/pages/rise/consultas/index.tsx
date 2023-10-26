@@ -1,13 +1,13 @@
 "use client";
 
 import { Button } from "@mui/material";
-import { PlanRefund } from "../home/components/plan-refund/PlanRefund";
-import styles from "./Appointments.module.scss";
-import { useEffect, useState } from "react";
+import { PlanRefund } from "../components/plan-refund/PlanRefund";
+import styles from "./styles.module.scss";
+import { FC, useEffect, useState } from "react";
 import blurDiamondVariant from "/blur_diamond_variant.svg";
 import about02 from "/images/about_02.png";
 
-export const Appointments = () => {
+const Appointments: FC = () => {
   const [banneStyle, setBannerStyle] = useState<React.CSSProperties>({});
 
   const calculateBannerStyle = (): void => {
@@ -65,7 +65,9 @@ export const Appointments = () => {
       <section className={styles.aboutSection}>
         <div className={styles.aboutContainer}>
           <h2 data-aos="fade-right">Dr. André Scardovelli</h2>
-          <span data-aos="fade-right">Especialista em performance esportiva.</span>
+          <span data-aos="fade-right">
+            Especialista em performance esportiva.
+          </span>
 
           <p data-aos="fade-right">
             Sou médico com expertise na área da medicina desportiva e atuo com
@@ -105,3 +107,5 @@ export const Appointments = () => {
     </main>
   );
 };
+
+export default Appointments;

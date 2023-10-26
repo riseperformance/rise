@@ -1,17 +1,13 @@
 "use client";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 import "./App.scss";
-import { Header } from "./components/header/Header";
-import { Home } from "./pages/home/Home";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { Appointments } from "./pages/appointments/Appointments";
-import { Plans } from "./pages/plans/Plans";
-import { DexaScan } from "./pages/exams/dexa-scan/DexaScan";
-import { Calorimetria } from "./pages/exams/calorimetria/Calorimetria";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
+import routes from "~react-pages";
+import { Header } from "./components/header/Header";
 
 declare module "@mui/material/styles" {
   interface Palette {
@@ -59,19 +55,14 @@ function App() {
     AOS.init();
   }, []);
 
+  console.log(routes);
+
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="rise" element={<Header />}>
-            <Route index element={<Home />} />
-            <Route path="consultas" element={<Appointments />} />
-            <Route path="planos" element={<Plans />} />
-            <Route path="exames/dexascan" element={<DexaScan />} />
-            <Route path="exames/calorimetria" element={<Calorimetria />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <Header />
+      <Suspense>
+        {useRoutes(routes)}
+      </Suspense>
     </ThemeProvider>
   );
 }

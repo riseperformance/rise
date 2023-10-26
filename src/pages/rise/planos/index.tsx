@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import styles from "./Plans.module.scss";
+import { FC, useEffect, useState } from "react";
+import styles from "./styles.module.scss";
 import blurDiamondVariant from "/blur_diamond_variant.svg";
-import { PlanRefund } from "../home/components/plan-refund/PlanRefund";
-import { Contacts } from "../../components/contacts/Contacts";
+import { PlanRefund } from "../components/plan-refund/PlanRefund";
+import { Contacts } from "../../../components/contacts/Contacts";
 
 type Plan = {
   title: string;
@@ -14,7 +14,7 @@ type Plan = {
   link?: string;
 };
 
-export const Plans = () => {
+const Plans: FC = () => {
   const [banneStyle, setBannerStyle] = useState<React.CSSProperties>({});
 
   const plans: Plan[] = [
@@ -190,3 +190,5 @@ export const Plans = () => {
     </main>
   );
 };
+
+export default Plans;

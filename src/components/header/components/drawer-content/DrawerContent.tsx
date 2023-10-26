@@ -30,7 +30,7 @@ export const DrawerContent = (props: Props) => {
                 ? styles.actived
                 : undefined
             )}
-            to="consultas"
+            to="rise/consultas"
             onClick={props.closeDrawer}
           >
             Consulta
@@ -43,7 +43,7 @@ export const DrawerContent = (props: Props) => {
               styles.link,
               location.pathname.includes("planos") ? styles.actived : undefined
             )}
-            to="planos"
+            to="rise/planos"
             onClick={props.closeDrawer}
           >
             Planos
@@ -59,7 +59,7 @@ export const DrawerContent = (props: Props) => {
                 ? styles.actived
                 : undefined
             )}
-            to="exames/dexascan"
+            to="rise/exames/dexascan"
             onClick={props.closeDrawer}
           >
             DEXA Scan <img src={checkSvg} draggable={false} />
@@ -74,7 +74,7 @@ export const DrawerContent = (props: Props) => {
                 ? styles.actived
                 : undefined
             )}
-            to="exames/calorimetria"
+            to="rise/exames/calorimetria"
             onClick={props.closeDrawer}
           >
             Calorimetria

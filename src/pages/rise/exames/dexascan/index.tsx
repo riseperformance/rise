@@ -1,15 +1,15 @@
 "use client";
 
 import { Button } from "@mui/material";
-import styles from "./DexaScan.module.scss";
+import styles from "./styles.module.scss";
 import blurDiamondVariant from "/blur_diamond_variant.svg";
 import dexaScanImage01 from "/images/dexa_scan_01.png";
 import dexaScanImage02 from "/images/dexa_scan_02.png";
 import dexaScanImage03 from "/images/dexa_scan_03.png";
 import checkDark from "/check_dark.svg";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
-export const DexaScan = () => {
+const DexaScan: FC = () => {
   const [banneStyle, setBannerStyle] = useState<React.CSSProperties>({});
 
   const calculateBannerStyle = (): void => {
@@ -92,3 +92,5 @@ export const DexaScan = () => {
     </main>
   );
 };
+
+export default DexaScan;

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+Sitemap: https://wuerta.github.io//sitemap.xml
