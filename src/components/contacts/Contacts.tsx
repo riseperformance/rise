@@ -26,10 +26,10 @@ export const Contacts = (props: Props) => {
           <li>
             <a
               className={styles.whatsappContact}
-              href="https://api.whatsapp.com/send?phone=5561982824629"
+              href="https://wa.me/5518998110489?text=Olá+gostaria+de+saber+mais+sobre+os+serviços+da+RISE+Health"
               target="_blank"
             >
-              (61) 982824629
+              (18) 998110489
             </a>
           </li>
           <li>

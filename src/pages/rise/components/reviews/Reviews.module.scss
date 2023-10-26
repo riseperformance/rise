@@ -86,14 +86,19 @@
     }
   }
 
-  .scheduleAppointmentButton {
+  a {
     max-width: 38rem;
     width: 100%;
-    min-height: 4rem;
     border-radius: 2rem;
-    font-size: 1.75rem;
-    text-transform: initial;
     margin-bottom: 10rem;
+
+    .scheduleAppointmentButton {
+      width: 100%;
+      min-height: 4rem;
+      border-radius: 2rem;
+      font-size: 1.75rem;
+      text-transform: initial;
+    }
   }
 
   .divider {

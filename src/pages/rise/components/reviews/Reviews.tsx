@@ -42,7 +42,7 @@ export const Reviews = () => {
           620: {
             slidesPerView: 1.15,
             spaceBetween: 24,
-          }
+          },
         }}
         data-aos="fade-left"
       >
@@ -59,13 +59,19 @@ export const Reviews = () => {
         ))}
       </Swiper>
 
-      <Button
-        variant="contained"
-        color="purple"
-        className={styles.scheduleAppointmentButton}
+      <a
+        href="https://wa.me/5518998110489?text=Olá+gostaria+de+agendar+uma+consulta+na+RISE+Health"
+        target="_blank"
       >
-        Agende sua consulta já!
-      </Button>
+        <Button
+          tabIndex={-1}
+          variant="contained"
+          color="purple"
+          className={styles.scheduleAppointmentButton}
+        >
+          Agende sua consulta já!
+        </Button>
+      </a>
 
       <div className={styles.divider} />
     </section>

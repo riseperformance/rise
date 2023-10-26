@@ -23,7 +23,7 @@ const Plans: FC = () => {
       description:
         "Esse pacote conta com 1 consulta com o Dr André (médico do esporte) + avaliação física completa + 1 plano de performance.",
       benefits: [],
-      link: "/",
+      link: "https://wa.me/5518998110489?text=Olá+gostaria+de+saber+mais+sobre+os+serviços+da+RISE+Health",
     },
     {
       title: "Rise Performance Bronze",
@@ -33,7 +33,7 @@ const Plans: FC = () => {
         "Acompanhamento semanal de performance via WhatsApp por 3 meses;",
         "1 Plano de performance;",
       ],
-      link: "/",
+      link: "https://wa.me/5518998110489?text=Olá+gostaria+de+saber+mais+sobre+os+serviços+da+RISE+Health",
       duration: "3 meses",
     },
     {
@@ -44,7 +44,7 @@ const Plans: FC = () => {
         "Acompanhamento semanal de performance via WhatsApp por 6 meses;",
         "1 Plano de performance;",
       ],
-      link: "/",
+      link: "https://wa.me/5518998110489?text=Olá+gostaria+de+saber+mais+sobre+os+serviços+da+RISE+Health",
       duration: "6 meses",
     },
     {
@@ -55,7 +55,7 @@ const Plans: FC = () => {
         "Acompanhamento semanal de performance via WhatsApp por 1 ano;",
         "1 Plano de performance;",
       ],
-      link: "/",
+      link: "https://wa.me/5518998110489?text=Olá+gostaria+de+saber+mais+sobre+os+serviços+da+RISE+Health",
       duration: "1 ano",
     },
   ];

@@ -92,13 +92,19 @@ const Appointments: FC = () => {
           esportivo e possíveis lesões.
         </p>
 
-        <Button
-          variant="contained"
-          color="purple"
-          className={styles.scheduleExamButton}
+        <a
+          href="https://wa.me/5518998110489?text=Olá+gostaria+de+agendar+uma+consulta+na+RISE+Health"
+          target="_blank"
         >
-          Quero agendar minha consulta!
-        </Button>
+          <Button
+            tabIndex={-1}
+            variant="contained"
+            color="purple"
+            className={styles.scheduleExamButton}
+          >
+            Quero agendar minha consulta!
+          </Button>
+        </a>
       </section>
 
       <div className={styles.divider} />

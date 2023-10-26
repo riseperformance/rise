@@ -13,23 +13,36 @@ export const Welcome = () => {
       </div>
 
       <div className={styles.callTheActionContainer}>
-        <Button
-          variant="contained"
-          color="purple"
-          className={styles.callTheAction}
-          data-aos="zoom-in"
+        <a
+          href="https://wa.me/5518998110489?text=Olá+gostaria+de+agendar+uma+consulta+na+RISE+Health"
+          target="_blank"
         >
-          Quero me consultar
-        </Button>
-        <Button
-          variant="outlined"
-          color="white"
-          className={styles.knowMoreButton}
-          data-aos="zoom-in"
-          data-aos-delay="200"
+          <Button
+            tabIndex={-1}
+            variant="contained"
+            color="purple"
+            className={styles.callTheAction}
+            data-aos="zoom-in"
+          >
+            Quero me consultar
+          </Button>
+        </a>
+        <a
+          className={styles.knowMoreLink}
+          href="https://wa.me/5518998110489?text=Olá+gostaria+de+saber+mais+sobre+os+serviços+da+RISE+Health"
+          target="_blank"
         >
-          Saiba mais
-        </Button>
+          <Button
+            tabIndex={-1}
+            variant="outlined"
+            color="white"
+            className={styles.knowMoreButton}
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            Saiba mais
+          </Button>
+        </a>
       </div>
 
       <img src={blurDiamond} alt="" draggable={false} loading="lazy" />

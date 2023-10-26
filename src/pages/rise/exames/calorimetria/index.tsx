@@ -54,13 +54,19 @@ const Calorimetria: FC = () => {
         <img src={calorimetriaImage03} alt="Calorimetria 03" />
       </section>
 
-      <Button
-        variant="contained"
-        color="purple"
-        className={styles.scheduleExamButton}
+      <a
+        href="https://wa.me/5518998110489?text=Olá+gostaria+de+agendar+uma+consulta+na+RISE+Health"
+        target="_blank"
       >
-        Quero agendar meu exame!
-      </Button>
+        <Button
+          tabIndex={-1}
+          variant="contained"
+          color="purple"
+          className={styles.scheduleExamButton}
+        >
+          Quero agendar meu exame!
+        </Button>
+      </a>
     </main>
   );
 };
