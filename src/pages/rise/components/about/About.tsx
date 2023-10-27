@@ -9,7 +9,7 @@ export const About = () => {
 
   const aboutParagraphs = [
     "O Dr. André é médico com expertise na área da medicina desportiva e atua com grande enfoque no acompanhamento de atletas profissionais e amadores que visam melhora da performance e melhora da composição corporal.",
-    "Ele fez especialização em duas instituições, (ibcmed- RS) e CEFIT-SP ) e atualmente tem se destacado pela excelência no atendimento e pelo altíssimo grau de satisfação dos seus pacientes.",
+    "Ele fez especialização em duas instituições (ibcmed- RS e CEFIT-SP) e atualmente tem se destacado pela excelência no atendimento e pelo altíssimo grau de satisfação dos seus pacientes.",
   ];
 
   const calculateBannerStyle = (): void => {

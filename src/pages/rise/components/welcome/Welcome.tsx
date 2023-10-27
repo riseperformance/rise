@@ -29,7 +29,7 @@ export const Welcome = () => {
         </a>
         <a
           className={styles.knowMoreLink}
-          href="https://wa.me/5518998110489?text=Olá+gostaria+de+saber+mais+sobre+os+serviços+da+RISE+Health"
+          href="https://www.instagram.com/rise_.h/"
           target="_blank"
         >
           <Button

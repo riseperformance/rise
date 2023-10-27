@@ -29,7 +29,7 @@ export const Contacts = (props: Props) => {
               href="https://wa.me/5518998110489?text=Olá+gostaria+de+saber+mais+sobre+os+serviços+da+RISE+Health"
               target="_blank"
             >
-              (18) 998110489
+              (18) 99811-0489
             </a>
           </li>
           <li>
