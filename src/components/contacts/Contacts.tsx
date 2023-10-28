@@ -33,8 +33,8 @@ export const Contacts = (props: Props) => {
             </a>
           </li>
           <li>
-            <a className={styles.phoneContact} href="tel:+55613558-0575">
-              (61) 3558-0575
+            <a className={styles.phoneContact} href="tel:+55183903-1529">
+              (18) 3903-1529
             </a>
           </li>
         </ul>
